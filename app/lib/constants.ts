@@ -1,16 +1,16 @@
 import { calcaulateExperience, formatPhoneNumber } from "@/app/lib/utils"
 
 export const THEME_ICONS = {
-    SUN: '/icons/sun-svgrepo-com.svg',
-    MOON: '/icons/moon-svgrepo-com.svg',
+    SUN: './icons/sun-svgrepo-com.svg',
+    MOON: './icons/moon-svgrepo-com.svg',
 }
 
 const CONTACT_ICONS = {
-    PHONE: '/icons/smartphone-material-svgrepo-com.svg',
-    EMAIL: '/icons/email-svgrepo-com.svg',
-    GITHUB: '/icons/github-142-svgrepo-com.svg',
-    LINKEDIN: '/icons/linkedin-svgrepo-com.svg',
-    TELEGRAM: '/icons/telegram-svgrepo-com.svg',
+    PHONE: './icons/smartphone-material-svgrepo-com.svg',
+    EMAIL: './icons/email-svgrepo-com.svg',
+    GITHUB: './icons/github-142-svgrepo-com.svg',
+    LINKEDIN: './icons/linkedin-svgrepo-com.svg',
+    TELEGRAM: './icons/telegram-svgrepo-com.svg',
 }
 
 export const MY_DATA = {
