@@ -19,7 +19,7 @@ export const MY_DATA = {
     PHONE: formatPhoneNumber('299106112'),
     EMAIL: 'ti5@tut.by',
     GITHUB: 'https://github.com/VProStudio',
-    LINKEDIN: 'https://www.linkedin.com/feed/?highlightedUpdateType=SHARED_BY_YOUR_NETWORK&highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7343568171133464576',
+    LINKEDIN: 'https://www.linkedin.com/in/anatoly-yakubovsky-a750b635b/',
     TELEGRAM: 'https://t.me/TigrisSunset',
     ABOUT: `Since 2024, I've been actively mastering programming and frontend development. To compensate for my lack of commercial experience, I've completed intensive project-based courses and gained foundational knowledge in information security. I'm highly motivated to grow professionally and welcome challenging opportunities.`,
 
