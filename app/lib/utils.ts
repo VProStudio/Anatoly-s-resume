@@ -1,4 +1,4 @@
-import type { WorkPeriod } from '@/app/types/index'
+import type { WorkPeriod, GitHubApiRepo } from '@/app/types/index'
 
 export const formatPhoneNumber = (phone: string) => {
     return phone.replace(/(\d{2})(\d{3})(\d{2})(\d{2})/, '+375 ($1) $2-$3-$4');
@@ -34,7 +34,7 @@ export const fetchRepos = async (url: string) => {
 
         const repos = await response.json();
 
-        return repos.map((repo: any) => ({
+        return repos.map((repo: GitHubApiRepo) => ({
             name: repo.name,
             description: repo.description,
             language: repo.language,

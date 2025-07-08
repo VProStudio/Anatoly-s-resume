@@ -1,6 +1,6 @@
 import type { GitHubRepo } from '@/app/types/index'
 
-export function GitHubRepos({ name, description, language, updt, url, stars }: GitHubRepo) {
+export function GitHubRepos({ name, description, language, updt, url }: GitHubRepo) {
     return (
         <a
             href={url}

@@ -34,7 +34,16 @@ export interface GitHubRepo {
     language: string | null;
     updt: string;
     url: string;
-    stars: number;
+    stars?: number;
+}
+
+export interface GitHubApiRepo {
+    name: string;
+    description: string | null;
+    language: string | null;
+    updated_at: string;
+    html_url: string;
+    stargazers_count: number;
 }
 
 export interface ThemeToggleProps {
