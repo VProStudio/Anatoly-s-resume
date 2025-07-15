@@ -1,5 +1,5 @@
 import { THEME_ICONS } from '@/app/lib/constants';
-import type { ThemeToggleProps } from '@/app/types/index'
+import type { ThemeToggleProps } from '@/app/lib/types'
 
 export function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
     return (

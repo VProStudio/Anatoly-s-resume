@@ -1,4 +1,4 @@
-import type { SectionProps } from '@/app/types/index'
+import type { SectionProps } from '@/app/lib/types'
 
 export function Section({ title, children, stats }: SectionProps) {
     return (

@@ -12,9 +12,14 @@ export interface ContactItemProps {
     url?: string
 }
 
-export interface SkillBarProps {
-    skill: string,
+export interface SkillTagProps {
+    name: string,
     level: number
+}
+
+export interface SkillGroupProps {
+    title: string;
+    skills: SkillTagProps[];
 }
 
 export interface ExperienceProps {

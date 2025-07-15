@@ -1,6 +1,6 @@
 import { Section } from '@/app/components/ui/Section';
 import { GitHubRepos } from '@/app/components/ui/GitHubRepos';
-import type { ProjectsSectionProps } from '@/app/types';
+import type { ProjectsSectionProps } from '@/app/lib/types';
 
 export function ProjectsSection({ repos }: ProjectsSectionProps) {
     return (

@@ -9,7 +9,7 @@ import { SkillsSection } from '@/app/components/sections/SkillsSection'
 import { AboutSection } from '@/app/components/sections/AboutSection'
 import { ProjectsSection } from '@/app/components/sections/ProjectsSection'
 import { ExperienceSection } from '@/app/components/sections/ExperienceSection'
-import type { GitHubRepo } from '@/app/types'
+import type { GitHubRepo } from '@/app/lib/types'
 
 
 export default function Home() {

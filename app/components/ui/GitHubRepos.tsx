@@ -1,4 +1,4 @@
-import type { GitHubRepo } from '@/app/types/index'
+import type { GitHubRepo } from '@/app/lib/types'
 
 export function GitHubRepos({ name, description, language, updt, url }: GitHubRepo) {
     return (

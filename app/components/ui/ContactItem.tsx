@@ -1,4 +1,4 @@
-import type { ContactItemProps } from "@/app/types/index";
+import type { ContactItemProps } from "@/app/lib/types";
 
 export function ContactItem({ icon, text, url }: ContactItemProps) {
     const content = (

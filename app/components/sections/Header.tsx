@@ -1,6 +1,6 @@
 import { MY_DATA } from '@/app/lib/constants';
 import { ThemeToggle } from '@/app/components/ui/ThemeToggle';
-import type { HeaderProps } from '@/app/types/index';
+import type { HeaderProps } from '@/app/lib/types';
 
 export function Header({ theme, onThemeToggle }: HeaderProps) {
     return (

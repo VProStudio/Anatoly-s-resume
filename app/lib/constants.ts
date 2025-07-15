@@ -1,4 +1,4 @@
-import { calcaulateExperience, formatPhoneNumber } from "@/app/lib/utils"
+import { calcaulateExperience, formatPhoneNumber, groupSkillByLevel } from "@/app/lib/utils"
 
 export const THEME_ICONS = {
     SUN: './icons/sun-svgrepo-com.svg',
@@ -59,18 +59,23 @@ export const MY_DATA = {
             },
         ];
     },
+
     SKILLS: [
-        { name: 'JavaScript', level: 85 },
-        { name: 'TypeScript', level: 70 },
-        { name: 'React', level: 70 },
-        { name: 'ReactNative', level: 85 },
+        { name: 'JavaScript', level: 90 },
+        { name: 'TypeScript', level: 90 },
+        { name: 'React', level: 90 },
+        { name: 'ReactNative', level: 90 },
         { name: 'HTML/CSS', level: 90 },
-        { name: 'Redux', level: 60 },
-        { name: 'Node.js', level: 80 },
-        { name: 'ESLint', level: 80 },
-        { name: 'TailWind', level: 70 },
-        { name: 'Prettier', level: 80 },
+        { name: 'Redux', level: 49 },
+        { name: 'Node.js', level: 49 },
+        { name: 'ESLint', level: 49 },
+        { name: 'TailWind', level: 49 },
+        { name: 'Prettier', level: 49 },
     ],
+    get GROUPED_SKILLS() {
+        return groupSkillByLevel(this.SKILLS)
+    },
+
     EXPERIENCE: [
         { position: 'Frontend', company: 'IT-Academy', start: '13.01.2025', end: '04.05.2025' },
     ],

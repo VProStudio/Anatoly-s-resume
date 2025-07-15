@@ -1,4 +1,4 @@
-import type { ExperienceProps } from "@/app/types/index"
+import type { ExperienceProps } from "@/app/lib/types"
 
 export function Experience({ position, company, period }: ExperienceProps) {
     return (
