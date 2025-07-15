@@ -1,5 +1,4 @@
 import type { WorkPeriod, GitHubApiRepo, SkillTagProps } from '@/app/lib/types'
-import { MY_DATA } from './constants';
 
 export const formatPhoneNumber = (phone: string) => {
     return phone.replace(/(\d{2})(\d{3})(\d{2})(\d{2})/, '+375 ($1) $2-$3-$4');
@@ -54,5 +53,5 @@ export const groupSkillByLevel = (skills: SkillTagProps[]) => {
         advanced: skills.filter((s: SkillTagProps) => s.level >= 70),
         intermediate: skills.filter((s: SkillTagProps) => s.level >= 40 && s.level < 70),
         beginner: skills.filter((s: SkillTagProps) => s.level < 40),
-    }
+    };
 }
