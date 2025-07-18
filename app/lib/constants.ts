@@ -6,11 +6,26 @@ export const THEME_ICONS = {
 }
 
 const CONTACT_ICONS = {
-    PHONE: './icons/smartphone-material-svgrepo-com.svg',
-    EMAIL: './icons/email-svgrepo-com.svg',
-    GITHUB: './icons/github-142-svgrepo-com.svg',
-    LINKEDIN: './icons/linkedin-svgrepo-com.svg',
-    TELEGRAM: './icons/telegram-svgrepo-com.svg',
+    PHONE: {
+        light: './icons/phone-dark.svg',
+        dark: './icons/phone-light.svg'
+    },
+    EMAIL: {
+        light: './icons/mail-dark.svg',
+        dark: './icons/mail-light.svg'
+    },
+    GITHUB: {
+        light: './icons/gh-dark.svg',
+        dark: './icons/gh-light.svg'
+    },
+    LINKEDIN: {
+        light: './icons/linkedIn-dark.svg',
+        dark: './icons/linkedIn-light.svg'
+    },
+    TELEGRAM: {
+        light: './icons/tg-dark.svg',
+        dark: './icons/tg-light.svg'
+    },
 }
 
 export const MY_DATA = {

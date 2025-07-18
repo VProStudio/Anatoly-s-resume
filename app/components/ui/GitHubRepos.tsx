@@ -18,7 +18,7 @@ export function GitHubRepos({ name, description, language, updt, url }: GitHubRe
                 <p className="text-text-secondary text-sm mb-2">{description}</p>
             )}
             <div className="text-xs text-text-secondary">
-                Updated: {new Date(updt).toLocaleDateString('en-US')}
+                Updated: {new Date(updt).toLocaleDateString('ru-RU')}
             </div>
         </a>
     );

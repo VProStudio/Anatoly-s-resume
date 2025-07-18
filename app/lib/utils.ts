@@ -1,4 +1,4 @@
-import type { WorkPeriod, GitHubApiRepo, SkillTagProps } from '@/app/lib/types'
+import type { WorkPeriod, GitHubApiRepo, SkillTagProps, GitHubRepo } from '@/app/lib/types'
 
 export const formatPhoneNumber = (phone: string) => {
     return phone.replace(/(\d{2})(\d{3})(\d{2})(\d{2})/, '+375 ($1) $2-$3-$4');
@@ -34,14 +34,16 @@ export const fetchRepos = async (url: string) => {
 
         const repos = await response.json();
 
-        return repos.map((repo: GitHubApiRepo) => ({
-            name: repo.name,
-            description: repo.description,
-            language: repo.language,
-            updt: repo.updated_at,
-            url: repo.html_url,
-            stars: repo.stargazers_count,
-        }));
+        return repos
+            .map((repo: GitHubApiRepo) => ({
+                name: repo.name,
+                description: repo.description,
+                language: repo.language,
+                updt: repo.updated_at,
+                url: repo.html_url,
+                stars: repo.stargazers_count,
+            }))
+            .sort((a: GitHubRepo, b: GitHubRepo) => new Date(b.updt).getTime() - new Date(a.updt).getTime());
     } catch (error) {
         console.error('Error loading repositories:', error);
         return [];

@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
-import { useTheme } from "./hooks/useTheme"
+import { useTheme } from "@/app/theme/ThemeContext"
 import { fetchRepos, extractGitHubUsername } from '@/app/lib/utils'
 import { MY_DATA } from "@/app/lib/constants"
 import { Header } from '@/app/components/sections/Header'
@@ -13,8 +13,8 @@ import type { GitHubRepo } from '@/app/lib/types'
 
 
 export default function Home() {
-  const { theme, toggleTheme } = useTheme()
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const username = extractGitHubUsername(MY_DATA.GITHUB);

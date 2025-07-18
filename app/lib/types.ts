@@ -7,7 +7,7 @@ export interface SectionProps {
 }
 
 export interface ContactItemProps {
-    icon: string,
+    icon: string | { light: string; dark: string },
     text: string
     url?: string
 }

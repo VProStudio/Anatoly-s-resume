@@ -1,9 +1,16 @@
+import { useTheme } from "@/app/theme/ThemeContext"
 import type { ContactItemProps } from "@/app/lib/types";
 
 export function ContactItem({ icon, text, url }: ContactItemProps) {
+    const { theme } = useTheme()
+    const iconSrc = typeof icon === 'string' ? icon : icon[theme];
     const content = (
         <>
-            <img src={icon} alt={text} className="w-5 h-5 mr-2" />
+            <img
+                src={iconSrc}
+                alt={text}
+                key={`icon-${theme}`}
+                className="w-5 h-5 mr-2" />
             <span>{text}</span>
         </>
     );

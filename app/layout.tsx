@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from '@/app/theme/ThemeContext';
+import ThemeScript from '@/app/theme/ThemeScript';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -23,11 +25,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+        <style>{`
+          html:not(.theme-loaded) {
+            visibility: hidden;
+          }
+        `}</style>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
