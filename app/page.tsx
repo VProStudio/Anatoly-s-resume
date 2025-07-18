@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from "react"
-import { useTheme } from "@/app/theme/ThemeContext"
 import { fetchRepos, extractGitHubUsername } from '@/app/lib/utils'
 import { MY_DATA } from "@/app/lib/constants"
 import { Header } from '@/app/components/sections/Header'
@@ -14,7 +13,6 @@ import type { GitHubRepo } from '@/app/lib/types'
 
 export default function Home() {
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
-  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const username = extractGitHubUsername(MY_DATA.GITHUB);
@@ -26,7 +24,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background p-4 md:p-8 text-text">
       <div className="max-w-4xl mx-auto">
-        <Header theme={theme} onThemeToggle={toggleTheme} />
+        <Header />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-1 space-y-6">
