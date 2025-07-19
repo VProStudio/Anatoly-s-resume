@@ -20,7 +20,7 @@ const CONTACT_ICONS = {
     },
     LINKEDIN: {
         light: './icons/linkedIn-dark.svg',
-        dark: './icons/linkedIn-light.svg'
+        dark: './icons/linkedin-light.svg'
     },
     TELEGRAM: {
         light: './icons/tg-dark.svg',
