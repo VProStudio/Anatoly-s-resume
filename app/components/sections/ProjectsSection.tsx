@@ -14,15 +14,15 @@ export function ProjectsSection({ repos }: ProjectsSectionProps) {
             <div className="flex mt-4 space-x-2">
                 <button
                     onClick={() => setDisplayCount(3)}
-                    className="mt-4 px-2 py-1 bg-primary text-white rounded hover:bg-primary-dark transition-colors"
+                    className="mt-4 px-2 py-1 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
                 >3</button>
                 <button
                     onClick={() => setDisplayCount(5)}
-                    className="mt-4 px-2 py-1 bg-primary text-white rounded hover:bg-primary-dark transition-colors"
+                    className="mt-4 px-2 py-1 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
                 >5</button>
                 <button
                     onClick={() => setDisplayCount(repos.length)}
-                    className="mt-4 px-2 py-1 bg-primary text-white rounded hover:bg-primary-dark transition-colors"
+                    className="mt-4 px-2 py-1 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
                 >All</button>
             </div>
         </Section>
