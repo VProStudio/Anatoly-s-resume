@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { HTMLMotionProps } from 'framer-motion';
 
 export interface SectionProps {
     title: string,
@@ -64,3 +65,35 @@ export interface HeaderProps {
 export interface ProjectsSectionProps {
     repos: GitHubRepo[];
 }
+
+export type AnimationProps = {
+    children: React.ReactNode
+    className?: string;
+    delay?: number;
+} & HTMLMotionProps<'div'>;
+
+export type HoverCardProps = AnimationProps & {
+    disableOnMobile?: boolean;
+    scaleValue?: number;
+    elevateValue?: number;
+};
+
+type SlideDirection = 'left' | 'right' | 'up' | 'down';
+
+export type SlideInProps = {
+    children: React.ReactNode;
+    className?: string;
+    direction?: SlideDirection;
+    distance?: number | string;
+    mobileDistance?: number | string;
+    mobileDirection?: SlideDirection | 'none';
+} & HTMLMotionProps<'div'>;
+
+
+export type StaggerListProps<T> = {
+    items: T[];
+    renderItem: (item: T) => React.ReactNode;
+    staggerDelay?: number;
+    disableAnimation?: boolean;
+    getItemKey?: (item: T) => string | number;
+};
