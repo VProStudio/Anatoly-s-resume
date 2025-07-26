@@ -15,9 +15,17 @@ export const StaggerList = <T,>({
 
     const getKey = (item: T, index: number): string | number => {
         if (getItemKey) return getItemKey(item);
-        if (typeof item === 'object' && item && 'id' in item) {
-            return (item as any).id;
+
+        if (item && typeof item === "object" && "id" in item) {
+            const itemWithId = item as { id: unknown };
+
+            if (typeof itemWithId.id === "string" || typeof itemWithId.id === "number") {
+                return itemWithId.id;
+            }
+
+            return JSON.stringify(itemWithId.id);
         }
+
         return index;
     };
 
